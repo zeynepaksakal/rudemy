@@ -1,0 +1,283 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.iletisimbaslik {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.iletisimbaslik img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+
+.contact-section {
+    background-color: #ffffff;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    padding: 40px 20px;
+}
+
+
+.info-item {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.info-item h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.info-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-item ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info-item ul li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.info-item ul li a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.info-item ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.form2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.form2 label {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.form2 input,
+.form2 textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.form2 textarea {
+    resize: vertical;
+}
+
+.form2 button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.form2 button:hover {
+    background-color: #1367ef;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+.info-item2 {
+    text-align: center;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.info-item2:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+.info-item2 p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+
+.info-item2:hover p {
+    color: #333;
+}
+
+.info-item2 p strong {
+    font-weight: bold;
+    color: #1367ef;
+}
+
+
+
+/* Responsive ayarı */
+@media (max-width: 992px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 14px;
+    }
+
+    .info-item h2 {
+        font-size: 20px;
+    }
+}
+
+
+/*Geri bildirim ayarları*/
+
+
+.info-item-iletisim {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px 0;
+}
+
+.info-item-iletisim:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.form-title-iletisim {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-container-iletisim {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-label-iletisim {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-textarea-iletisim {
+    width: 100%;
+    max-width: 600px;
+    height: 60px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    resize: vertical;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-textarea-iletisim:focus {
+    border-color: #0d6efd;
+    box-shadow: 0px 0px 12px rgba(13, 110, 253, 0.3);
+    outline: none;
+}
+
+.form-button-iletisim {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-button-iletisim:hover {
+    background-color: #0056b3;
+    transform: scale(-1px);
+}
+
+@media screen and (max-width: 768px) {
+    .contact-section-iletisim {
+        padding: 60px 20px;
+    }
+
+    .form-textarea-iletisim {
+        width: 100%;
+    }
+
+    .form-button-iletisim {
+        width: 100%;
+    }
+}
+
+
+/*Geri bildirim stop*/

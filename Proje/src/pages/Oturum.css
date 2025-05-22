@@ -1,0 +1,356 @@
+.Oturum-arka {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.Oturum-arkaSag {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #1367ef;
+}
+
+.Oturum-arkaSol {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #1e0052;
+}
+
+.Oturum-tuval {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.Oturum-kaydirKutu {
+    width: 50%;
+    max-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-left: 50%;
+    position: absolute;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    z-index: 20;
+    transition: margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Oturum-ustKatman {
+    width: 200%;
+    height: 100%;
+    position: relative;
+    left: -100%;
+    transition: margin-left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Oturum-sol,
+.Oturum-sag {
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.Oturum-sol::-webkit-scrollbar,
+.Oturum-sag::-webkit-scrollbar {
+    display: none;
+}
+
+.Oturum-sol {
+    left: 0;
+    background: #ffffff;
+}
+
+.Oturum-sag {
+    right: 0;
+    background: #ffffff;
+}
+
+.Oturum-icerik {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Oturum-icerik h2 {
+    font-weight: 300;
+    font-size: 2.6em;
+    margin: 0.2em 0 0.1em;
+}
+
+.Oturum-sol .Oturum-icerik h2 {
+    color: #1367ef;
+}
+
+.Oturum-sag .Oturum-icerik h2 {
+    color: #1e0052;
+}
+
+.Oturum-formEleman {
+    margin: 1.6em 0;
+}
+
+.Oturum-formEleman.Oturum-formGonder {
+    margin: 1.6em 0 0;
+}
+
+.Oturum-formYigit {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+input {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    padding: 8px 1px;
+    margin-top: 0.1em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Oturum-sol label {
+    color: #000000;
+}
+
+.Oturum-sol input {
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+
+.Oturum-sol input:focus,
+.Oturum-sol input:active {
+    border-color: #1367ef;
+    color: #1367ef;
+}
+
+.Oturum-sol input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2C3034 inset;
+    -webkit-text-fill-color: #e3e3e3;
+}
+
+.Oturum-sol a {
+    color: #1367ef;
+}
+
+.Oturum-sag label {
+    color: #000000;
+}
+
+.Oturum-sag input {
+    border-bottom: 1px solid #000000;
+}
+
+.Oturum-sag input:focus,
+.Oturum-sag input:active {
+    border-color: #000000;
+}
+
+.Oturum-sag input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #f9f9f9 inset;
+    -webkit-text-fill-color: #212121;
+}
+
+.Oturum-checkbox {
+    -webkit-appearance: none;
+    outline: none;
+    background-color: #e3e3e3;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+}
+
+.Oturum-checkbox:focus,
+.Oturum-checkbox:checked:focus,
+.Oturum-checkbox:active,
+.Oturum-checkbox:checked:active {
+    border-color: #1367ef;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.Oturum-checkbox:checked {
+    outline: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+}
+
+.Oturum-checkbox:checked:after {
+    outline: none;
+    content: "✓";
+    color: #1367ef;
+    font-size: 1.4em;
+    font-weight: 900;
+    position: absolute;
+    top: -4px;
+    left: 4px;
+}
+
+.Oturum-formOnay {
+    display: flex;
+    align-items: center;
+}
+
+.Oturum-formOnay label {
+    margin: 0 6px 0;
+    font-size: 0.72em;
+}
+
+.Oturum-kayitBtn,
+.Oturum-girisBtn {
+    padding: 0.8em 1.2em;
+    margin: 0 10px 0 0;
+    width: auto;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #fff;
+    line-height: 1em;
+    letter-spacing: 0.6px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.Oturum-kayitBtn {
+    background: #1367ef;
+}
+
+.Oturum-girisBtn {
+    background: #1e0052;
+}
+
+.Oturum-pasif {
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    color: #1367ef;
+}
+
+.Oturum-girisBtn.Oturum-pasif {
+    color: #1e0052;
+}
+
+.Oturum-kayitBtn:hover,
+.Oturum-kayitBtn:focus {
+    background: #05337c;
+}
+
+.Oturum-girisBtn:hover,
+.Oturum-girisBtn:focus {
+    background: #05337c;
+}
+
+.Oturum-pasif:hover {
+    box-shadow: none;
+    background: #e3e3e3;
+}
+
+@media only screen and (max-width: 768px) {
+    .Oturum-kaydirKutu {
+        width: 80%;
+        margin-left: 20%;
+    }
+}
+
+
+/* logo */
+
+.Oturum-logo-tasarim {
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.Oturum-logo-tasarim img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: none;
+    box-shadow: 0 16px 48px 0 rgba(19,103,239,0.25), 0 2px 8px 0 rgba(30,0,82,0.12);
+    object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.Oturum-logo-tasarim img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 32px 80px 0 rgba(19,103,239,0.35), 0 4px 16px 0 rgba(30,0,82,0.18);
+}
+
+
+.Oturum-logo-tasarim2 {
+    position: relative;
+    bottom: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+.Oturum-logo-tasarim2 img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: none;
+    box-shadow: 0 16px 48px 0 rgba(19,103,239,0.25), 0 2px 8px 0 rgba(30,0,82,0.12);
+    object-fit: cover;
+    transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.Oturum-logo-tasarim2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 32px 80px 0 rgba(19,103,239,0.35), 0 4px 16px 0 rgba(30,0,82,0.18);
+}
+
+
+/*kayıt oluşturuldu mesajı için start */
+
+.Oturum-basarili-bilgi {
+    color: #1367ef;
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    animation: fadeInOturum 0.5s;
+}
+
+@keyframes fadeInOturum {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/*kayıt oluşturuldu mesajı son*/
